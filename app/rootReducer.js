@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
 
-import fuck from './reducers/test.js';
+import fuckState from './reducers/fuckState';
 
+export const reducers = {fuckState};
 
-
-const rootReducer = combineReducers(fuck);
+let rootReducer = combineReducers(reducers);
 
 export default rootReducer;

@@ -7,7 +7,7 @@ var pathToAmazeuiReact = path.resolve(node_modules, 'amazeui-react/dist/amazeui.
 
 module.exports = {
     //自动刷新浏览器
-    entry: ['webpack/hot/dev-server', path.resolve(__dirname, 'app/main.jsx')],
+    entry: ['webpack/hot/dev-server', path.resolve(__dirname, 'app/main.js')],
     //加入别名以便于import
     resolve: {
         alias: {
