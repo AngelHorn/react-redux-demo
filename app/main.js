@@ -1,9 +1,15 @@
 import React from 'react';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import rootReducer from './rootReducer';
+import RootComponent from './RootComponent';
 
-class Component extends React.Component {
-    render() {
-        return <h1>Hello world!!!</h1>;
-    }
-}
+let store = createStore(rootReducer);
 
-React.render(< Component />, document.body);
+React.render(
+<Provider store={store}>
+    {() => <RootComponent />}
+</Provider>
+ ,
+  document.body
+);
