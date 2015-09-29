@@ -2,7 +2,7 @@ var path = require('path');
 var node_modules = path.resolve(__dirname, 'node_modules');
 var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 var pathToRedux = path.resolve(node_modules, 'redux/dist/redux.min.js');
-var pathToReactRedux = path.resolve(node_modules, 'react-redux/dist/react-redux.min.js');
+//var pathToReactRedux = path.resolve(node_modules, 'react-redux/dist/react-redux.min.js');
 var pathToAmazeuiReact = path.resolve(node_modules, 'amazeui-react/dist/amazeui.react.js');
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
             'react': pathToReact,
             'amazeui': pathToAmazeuiReact,
             'redux': pathToRedux,
-            'react-redux': pathToReactRedux,
+            //'react-redux': pathToReactRedux,
         }
     },
     //合并之后的目录
@@ -30,6 +30,11 @@ module.exports = {
             test: /\.css$/, // Only .css files
             loader: 'style!css' // Run both loaders
         }],
-        noParse: [pathToReact, pathToAmazeuiReact, pathToRedux, pathToReactRedux]//不解析react
+        noParse: [
+          pathToReact,
+          pathToAmazeuiReact,
+          pathToRedux,
+          //pathToReactRedux
+        ]//不解析react
     },
 };
